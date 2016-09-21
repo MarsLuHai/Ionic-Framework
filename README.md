@@ -1,2 +1,2 @@
-# IonicFramework
+# Ionic Framework
 ionicFramework Samples
