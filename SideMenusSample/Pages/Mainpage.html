@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../ionic/css/ionic.css">
+    <script type="application/javascript" src="../ionic/js/ionic.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="../ionicons/ionicons.css">
+
+    <script type="application/javascript" src="../JavaScript/Mainpage.js"></script>
+    <meta charset="UTF-8">
+    <title>Side menus Samples</title>
+</head>
+
+<body ng-app="myApp">
+    <ion-nav-view></ion-nav-view>
+
+    <script id="MonCompte.html" type="text/ng-template">
+        <ion-side-menus>
+            <ion-side-menu-content>
+                <ion-nav-bar class="bar-dark">
+                    <ion-nav-back-button>
+
+                    </ion-nav-back-button>
+                </ion-nav-bar>
+                <ion-nav-view name="MonCompte" animation="slide-left-right"></ion-nav-view>
+            </ion-side-menu-content>
+
+            <ion-side-menu side="left">
+                <ion-header-bar class="bar-dark">
+                    <h1 class="title">Vos Accès</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <ion-list class="widget d-margins" >
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-ios7-home ion" ></i>Acceuil<i class="icon ion-ios7-arrow-forward ion"></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-person ion" ></i>Mon Compte<i class="icon ion-forward ion" ></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-person-stalker ion" ></i>Changer de Compte<i class="icon ion-ios7-arrow-forward ion" ></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-document-text ion" ></i>Consultations<i class="icon ion-ios7-arrow-forward ion" ></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-ios7-bookmarks ion" ></i>Carnet de Santé<i class="icon ion-ios7-arrow-forward ion"></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-ios7-bell ion" ></i>Alertes<i class="icon ion-ios7-arrow-forward ion" ></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-email ion" ></i>Messagerie<i class="icon ion-ios7-arrow-forward ion" ></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-android-settings ion" ></i>Préferences<i class="icon ion-ios7-arrow-forward ion" ></i>
+                        </ion-item>
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-ios7-contact-outline ion" ></i>Contacts<i class="icon ion-ios7-arrow-forward ion" ></i>
+                        </ion-item>
+
+                        <ion-item class="item widget  item-icon-left d-margins item-icon-right" ><i class="icon ion-log-out ion" ></i>Deconnexion<i class="icon ion-ios7-person-outline ion" ></i>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-side-menu>
+        </ion-side-menus>
+    </script>
+
+    <script id="Info.html" type="text/ng-template">
+        <ion-view title="Mon Compte">
+            <ion-nav-buttons side="left">
+                <button class="button icon button-clear ion-grid icon-left" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <ion-content>
+                <div class="list" style="background-color: white;">
+                    <div class="item item-divider" style="border-style: inset;">
+                        Vos informations personnelles
+                    </div>
+                    <label class="item item-input item-stacked-label" style="border-style: hidden;">
+                        <span class="input-label">Nom</span>
+                        <input type="text" placeholder="Nom" readonly>
+                    </label>
+                    <label class="item item-input item-stacked-label" style="border-style: hidden;">
+                        <span class="input-label">Prenom</span>
+                        <input type="text" placeholder="Prenom" readonly>
+                    </label>
+                    <label class="item item-input item-stacked-label" style="border-style: hidden;">
+                        <span class="input-label">Email</span>
+                        <input type="email" placeholder="@mail.com" readonly>
+                    </label>
+
+                    <label class="item item-input item-stacked-label" style="border-style: hidden;">
+                        <span class="input-label">Login</span>
+                        <input type="text" placeholder="Login" readonly>
+                    </label>
+                    <label class="item item-input item-stacked-label" style="border-style: hidden;">
+                        <span class="input-label">Mot de Passe</span>
+                        <input type="text" placeholder="Password" readonly>
+                    </label>
+                    <label class="item item-input item-stacked-label" style="border-style: hidden;">
+                        <span class="input-label">à Propos</span>
+                        <input type="text" placeholder="A Propos" readonly>
+                    </label>
+                </div>
+
+                <ion-list class="widget d-margins">
+                    <div class="item item-divider">
+                        Vos liens utiles
+                    </div>
+                    <ion-item class="item widget  item-icon-left d-margins"  ui-sref="MonCompte.Feedback"><i class="icon ion-thumbsup ion"></i>FeedBack</ion-item>
+                    <ion-item class="item widget  item-icon-left d-margins"  ui-sref="MonCompte.Aide"><i class="icon ion-help-buoy"></i>Aide</ion-item>
+                    <ion-item class="item widget  item-icon-left d-margins"  ui-sref="MonCompte.About"><i class="icon ion-information-circled"></i>About</ion-item>
+                </ion-list>
+                </div>
+            </ion-content>
+        </ion-view>
+    </script>
+
+    <script id="Feedback.html" type="text/ng-template">
+        <ion-view title="FeedBack">
+            <ion-content>
+                <div class="widget-container content-area vertical-col">
+                    <div class="list" style="background-color: white;">
+                        <div class="item item-divider" style="border-style: inset;">
+                            Faites nous un retour de votre experience
+                        </div>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Objet de votre retour</span>
+                        <input type="text" placeholder="Objet">
+                    </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="email" placeholder="@mail.com">
+                    </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Commentaire</span>
+                        <textarea type="text" rows="5" placeholder="votre retour..."></textarea>
+                    </label>
+                        <button class="button widget d-margins" style="float: right;">Soumettre</button>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-view>
+    </script>
+
+    <script id="Aide.html" type="text/ng-template">
+        <ion-view title="Aide">
+            <ion-content>
+                <div class="bar bar-header item-input-inset">
+                    <label class="item-input-wrapper">
+                    <i class="icon ion-ios-search placeholder-icon"></i>
+                    <input type="search" placeholder="Rechercher">
+                </label>
+                    <button class="button button-clear" onclick="">
+                    Cancel
+                </button>
+                </div>
+                <ion-list class="widget d-margins">
+                    <ion-item class="item widget"> List item</ion-item>
+                <ion-item class="item widget"> List item</ion-item>
+                    <ion-item class="item widget"> List item</ion-item>
+
+            </ion-list>
+        </ion-content>
+    </ion-view>
+</script>
+
+<script id="About.html " type="text/ng-template ">
+    <ion-view title="A Propos ">
+        <ion-content>
+            <div class="card ">
+                <div class="item item-text-wrap ">
+                    <h2>MyHealth est un projet innovant touchant au domaine de la santé qui aura pour ligne directrice la dématérialisation des données médicales.</h2>
+                    <h2> Ce projet d’envergure vise à être reconnu comme étant d’intérêt pubic.</h2>
+                    <h2>Disposant de multiples facettes, les objectifs de myHealth seront visibles aux différents niveaux du système de santé français.</h2>
+                    <h2> Du point de vue des particuliers, l’initiative permettra d’apporter davantage de transparence, proposant un aperçu de l’ensemble de leurs données médicales et se traduira par simplification du système de transmission des documents médicaux.</h2>
+                    <h2> Du point de vue des professionnels, le système proposera une sécurisation des données médicales mais également une simplification drastique du système de transmission des données médicales permettant une meilleure communication inter-services et inter-établissement.</h2>
+                    <h2> D’un point de vue global, le système myHealth changera l’image que l'on se fait actuellement de la santé. Il permettra d’une part de faire des économies significatives vis-à-vis du système actuel, mais possédera également une démarche écologique en réduisant les ressources utilisées par le système actuel.</h2>
+                </div>
+            </div>
+
+        </ion-content>
+    </ion-view>
+</script>
+</body>
+
+</body>
+</html>
